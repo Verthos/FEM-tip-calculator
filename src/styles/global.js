@@ -4,11 +4,11 @@ import { createGlobalStyle } from "styled-components"
 export const GlobalStyle = createGlobalStyle`
 :root{
     --background: #c5e4e7;
-    --strong-cyan: #26c2ad;
-    --darker-cyan: #00494d;
+    --strong-cyan: hsl(172, 67%, 45%);
+    --darker-cyan: hsl(183, 100%, 15%);
     --grayish-cyan-500: #5e7a7d;
-    --grayish-cyan-450: #7f9c9f; 
-    --grayish-cyan-200: #c5e4e7;
+    --grayish-cyan-450: hsl(185, 41%, 84%); 
+    --grayish-cyan-200: hsl(189, 41%, 97%);
 }
 
 *{

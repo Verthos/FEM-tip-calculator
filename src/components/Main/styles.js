@@ -3,12 +3,23 @@ import styled from "styled-components";
 
 
 export const StyledContainer = styled.div`
-    height: 100vh;
+    min-height: 100vh;
     background: var(--background);
     position: relative;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    color: darkcyan;
+
+    h1{
+        margin-top: 2rem;
+    }
+    input{
+        color: darkcyan;
+        font-weight: bold;
+    }
+
+    
 
     .peopleInput{
         width: 100%;
@@ -16,18 +27,42 @@ export const StyledContainer = styled.div`
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        
     }
 
-    .buttons{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-gap: 1rem;
-        margin-top: 1.75rem;
+    
 
+
+    .dashboard{
+        min-height: 85vh;
+        width: 90vw;
+        background: #ffffff;
+        border-radius: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2rem;
+        
+
+        .custom{
+            width: 100%;
+        }
+
+        .buttons{
+            width: 80%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-gap: 1rem;
+            margin-top: 0.5rem;
+            
+        }
+        .active{
+            background: darkcyan;
+        }
 
         button{
-            width: 12rem;
+            width: 100%;
             padding: 1rem;
             background: var(--darker-cyan);
             border-radius: 0.5rem;
@@ -41,34 +76,19 @@ export const StyledContainer = styled.div`
             }
         }
         
-    }
-
-
-    .dashboard{
-        position: absolute;
-        bottom: 0%;
-        height: 85vh;
-        width: 90vw;
-        background: #ffffff;
-        border-radius: 2rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
         input{
             width: 80%;
             padding: 1rem;
             border-radius: 0.5rem;
-            background: hsl(0, 41%, 90%);
+            background: var(--grayish-cyan-450);
             border: none
-            
         }
 
         h2{
 
             width: 80%;
             align-items: left;
-            margin-top: 2.5rem;
+            margin-top: 1.5rem;
 
         }
     
@@ -78,8 +98,8 @@ export const StyledContainer = styled.div`
         position: relative;
         background: var(--darker-cyan);
         width: 80%;
-        height: 25vh;
-        margin-top: 2.5rem;
+        min-height: 30vh;
+        margin: 2rem 0rem;
         border-radius: 1rem;
         display: flex;
         flex-direction: column;
@@ -87,25 +107,18 @@ export const StyledContainer = styled.div`
         justify-content: space-between;
         
         button{
-            padding: 1rem;
-            border: none;
-            border-radius: 0.5rem;
-            background: var(--strong-cyan);
-            transition: all 0.3s;
-            &:hover{
-                filter: brightness(1.2);
-            }
+            background: darkcyan;
         }
 
         section{
             width: 100%;
             display: flex;
             justify-content: space-between;
-            align-items: f;
 
             h1{
                 color: var(--strong-cyan);
-                font-size: 2.5rem;
+                font-size: 2rem;
+                margin: 0;
             }
 
 
@@ -123,7 +136,5 @@ export const StyledContainer = styled.div`
                 color: var(--grayish-cyan-500)
             }
         }
-    
     }
-
 `
