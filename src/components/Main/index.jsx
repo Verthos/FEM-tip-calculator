@@ -66,7 +66,6 @@ export function Main() {
                     <button className="reset">RESET</button>
                 </div>
             </div>
-            
         </StyledContainer>
 
 
