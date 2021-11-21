@@ -27,8 +27,8 @@ export function Main() {
         <StyledContainer>
             <h1>SPLI <br />TTER</h1>
             <div className="dashboard">
-                <h2>Conta</h2>
-                <input type="number" placeholder="$" onChange={(event) => setBill(event.target.value)}/>
+                <h2 className="inputTitles">Conta</h2>
+                <input className="billInput" type="number" placeholder="$" onChange={(event) => setBill(event.target.value)}/>
                 <h2>Gorjeta %</h2>
                 
                 <div className="buttons">
@@ -45,23 +45,23 @@ export function Main() {
                 </div>
 
                 <section className="peopleInput">
-                    <h2>Número de pessoas</h2>
+                    <h2 className="inputTitles">Número de pessoas</h2>
                     <input defaultValue="1" type="number" placeholder="icon" onChange={(event) => setNumberOfPeople(event.target.value)}/>
                 </section>
 
                 <div className="result">
                     <section>
-                        <h2>Gorjeta
+                        <h2 className="inputTitles">Gorjeta
                             <span>/ pessoa</span>
                         </h2>
-                        <h1>{!bill | !numberOfPeople ? "" : currency.format((bill * (Number(percentage)/100)) / numberOfPeople)}</h1>
+                        <h1>{!bill | !numberOfPeople ? "R$ 0" : currency.format((bill * (Number(percentage)/100)) / numberOfPeople)}</h1>
                     </section>
 
                     <section>
                         <h2>Total
                             <span>/ pessoa</span>
                         </h2>
-                        <h1>{!bill | !numberOfPeople ? "" : currency.format((bill / numberOfPeople) + ((bill * (Number(percentage)/100)/numberOfPeople)))}</h1>
+                        <h1>{!bill | !numberOfPeople ? "R$ 0" : currency.format((bill / numberOfPeople) + ((bill * (Number(percentage)/100)/numberOfPeople)))}</h1>
                     </section>
                     <button className="reset">RESET</button>
                 </div>

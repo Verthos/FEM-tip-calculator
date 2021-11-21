@@ -11,15 +11,26 @@ export const StyledContainer = styled.div`
     align-items: center;
     color: darkcyan;
 
+    @media(min-width: 420px){
+        justify-content: center;
+    }
+    
+
     h1{
         margin-top: 2rem;
     }
     input{
         color: darkcyan;
         font-weight: bold;
-    }
-
+    };
     
+    .inputTitles{
+        @media(min-width: 420px){
+            grid-column-end: 1;
+            grid-column-start: 1;
+            
+        }
+    }
 
     .peopleInput{
         width: 100%;
@@ -27,11 +38,21 @@ export const StyledContainer = styled.div`
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
+        @media(min-width: 420px){
+            grid-column-end: 1;
+            grid-column-start: 1;
+            margin-bottom: 10rem;
+        }
         
     }
 
-    
-
+    .billInput{
+        @media(min-width: 420px){
+            grid-column-end: 1;
+            grid-column-start: 1;
+        }
+    }
 
     .dashboard{
         min-height: 85vh;
@@ -42,6 +63,16 @@ export const StyledContainer = styled.div`
         flex-direction: column;
         align-items: center;
         margin-top: 2rem;
+
+        @media(min-width: 420px){
+            position: relative;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            width: 70vw;
+            height: 70vh;
+            place-items: center;
+            
+        }
         
 
         .custom{
@@ -55,6 +86,11 @@ export const StyledContainer = styled.div`
             grid-template-rows: 1fr 1fr 1fr;
             grid-gap: 1rem;
             margin-top: 0.5rem;
+            @media(min-width: 420px){
+                grid-column-end: 1;
+                grid-column-start: 1;
+                margin: 0;
+            }
             
         }
         .active{
@@ -89,6 +125,11 @@ export const StyledContainer = styled.div`
             width: 80%;
             align-items: left;
             margin-top: 1.5rem;
+            
+            @media(min-width: 420px){
+                grid-column-end: 1;
+                grid-column-start: 1;
+            }
 
         }
     
@@ -105,6 +146,15 @@ export const StyledContainer = styled.div`
         flex-direction: column;
         padding: 2rem;
         justify-content: space-between;
+
+        @media(min-width: 420px){
+            grid-column-end: 2;
+            grid-column-start: 2;
+            place-content: space-evenly;
+            height: 50vh;
+            position: absolute;
+            margin: auto;
+        }
         
         button{
             background: darkcyan;
@@ -136,5 +186,6 @@ export const StyledContainer = styled.div`
                 color: var(--grayish-cyan-500)
             }
         }
-    }
+        
+    }    
 `
